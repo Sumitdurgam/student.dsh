@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/5.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Student Dashboard</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="text-center mt-5">Student Dashboard</h1>
+      <div class="row mt-5">
+        <div class="col-sm-4">
+          <div class="card">
+            <div class="card-header">
+              Personal Information
+            </div>
+            <div class="card-body">
+              <p><b>Name:</b> Sumit Durgam</p>
+              <p><b>ID:</b> 123456789</p>
+              <p><b>Department:</b> Computer Science</p>
+              <p><b>Email:</b> sumitdurgam17@gmail.com</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-8">
+          <div class="card">
+            <div class="card-header">
+              Course Information
+            </div>
+            <div class="card-body">
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th>Course ID</th>
+                    <th>Course Name</th>
+                    <th>Grade</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>CSE 101</td>
+                    <td>Intro to Computer Science</td>
+                    <td>A</td>
+                  </tr>
+                  <tr>
+                    <td>CSE 102</td>
+                    <td>Data Structures and Algorithms</td>
+                    <td>B</td>
+                  </tr>
+                  <tr>
+                    <td>CSE 103</td>
+                    <td>Object-Oriented Programming</td>
+                    <td>A</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <button id="toggleBtn" class="btn btn-primary"><span><em>Toggle Information</em></span></button>
+
+  <script>
+    const toggleBtn = document.getElementById("toggleBtn");
+    const personalInfo = document.querySelector(".card-body");
+  
+    toggleBtn.addEventListener("click", function() {
+      personalInfo.style.display = personalInfo.style.display === "none" ? "block" : "none";
+    });
+  </script>
+</html>
